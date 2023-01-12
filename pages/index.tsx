@@ -1,7 +1,6 @@
 import Head from "next/head";
+import Games from "../src/screens/Games";
 import styles from "../styles/Home.module.css";
-import Sidebar from "../src/components/Sidebar";
-
 
 export default function Home() {
   return (
@@ -13,8 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Sidebar />
-        <h1>Front de componente</h1>
+        <Games />
       </main>
     </>
   );
