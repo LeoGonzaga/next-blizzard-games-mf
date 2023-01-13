@@ -6,22 +6,15 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0px 30px;
-
-  img {
-    border-radius: 3px;
-    transition: 0.2s all ease-in-out;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
+  background-color: #000;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: #000;
-  padding: 0px 30px;
-
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1800px;
   div {
     overflow: hidden;
   }
@@ -35,31 +28,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const Infos = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+const CardWrapper = styled.div`
+  position: relative;
+`;
 
-  padding: 40px 0px;
-  width: 100vw;
-  max-width: 1500px;
+const Background = styled.div`
+  position: absolute;
+  bottom: 30px;
+  left: 25%;
+`;
 
-  h1 {
-    color: #fff;
-    font-weight: 700;
-    font-size: 32px;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-
-    span {
-      margin-right: 171px;
-      color: #8f9199;
-      font-size: 15px;
-      line-height: 22px;
-      text-transform: uppercase;
+const Fixed = styled.div`
+  img {
+    border-radius: 3px;
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+      z-index: -99;
     }
   }
 `;
@@ -67,5 +52,7 @@ const Infos = styled.div`
 export const Styles = {
   Container,
   Wrapper,
-  Infos,
+  CardWrapper,
+  Background,
+  Fixed,
 };
